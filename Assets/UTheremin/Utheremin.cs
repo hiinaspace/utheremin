@@ -18,7 +18,7 @@ public class Utheremin : UdonSharpBehaviour
     float phase;
 
     // very low headroom for computation
-    private const int SAMPLE_RATE = 6000;
+    private const int SAMPLE_RATE = 4096;
 
     // there's a click artifact when the sample loops around that's
     // hard to avoid, so make it pretty long.
@@ -174,7 +174,7 @@ public class Utheremin : UdonSharpBehaviour
         // write slightly ahead; seems to solve some artifacts when changing pitch; but still not great.
         var absoluteWriteHead = absoluteReadHead + writeAheadSamples;
 
-        writeHead = (absoluteReadHead) % SAMPLEN;
+        writeHead = absoluteWriteHead % SAMPLEN;
 
         // phase match for (new) freq
         // awhTime * prevFreq * TWOPI + phase = awhTime * freq * TWOPI + newPhase % TWOPI
