@@ -20,7 +20,6 @@ MonoBehaviour:
     this\r\n    __0_p_Vector3: %UnityEngineVector3, null\r\n    __0_const_intnl_SystemSingle:
     %SystemSingle, null\r\n    __1_const_intnl_SystemSingle: %SystemSingle, null\r\n
     \   __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n    __0_intnl_SystemSingle:
-    %SystemSingle, null\r\n    __1_intnl_SystemSingle: %SystemSingle, null\r\n    __2_intnl_SystemSingle:
     %SystemSingle, null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n
     \   __0_intnl_UnityEngineVector3: %UnityEngineVector3, null\r\n\r\n.data_end\r\n\r\n
     \       \r\n         # using UdonSharp;\r\n        \r\n         # using UnityEngine;\r\n
@@ -30,12 +29,10 @@ MonoBehaviour:
     \   .export _interact\r\n        \r\n    _interact:\r\n        \r\n        PUSH,
     __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
     height = Mathf.Repeat(height + 0.1f, 1.1f);\r\n        PUSH, height\r\n        PUSH,
-    __0_intnl_SystemSingle\r\n        COPY\r\n        PUSH, __0_intnl_SystemSingle\r\n
-    \       PUSH, __0_const_intnl_SystemSingle\r\n        PUSH, __1_intnl_SystemSingle\r\n
-    \       EXTERN, \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\r\n
-    \       PUSH, __1_intnl_SystemSingle\r\n        PUSH, __1_const_intnl_SystemSingle\r\n
-    \       PUSH, __2_intnl_SystemSingle\r\n        EXTERN, \"UnityEngineMathf.__Repeat__SystemSingle_SystemSingle__SystemSingle\"\r\n
-    \       PUSH, __2_intnl_SystemSingle\r\n        PUSH, height\r\n        COPY\r\n
+    __0_const_intnl_SystemSingle\r\n        PUSH, __0_intnl_SystemSingle\r\n        EXTERN,
+    \"SystemSingle.__op_Addition__SystemSingle_SystemSingle__SystemSingle\"\r\n        PUSH,
+    __0_intnl_SystemSingle\r\n        PUSH, __1_const_intnl_SystemSingle\r\n        PUSH,
+    height\r\n        EXTERN, \"UnityEngineMathf.__Repeat__SystemSingle_SystemSingle__SystemSingle\"\r\n
     \       \r\n         # var p = transform.position;\r\n        PUSH, __0_this_intnl_UnityEngineTransform\r\n
     \       PUSH, __0_intnl_UnityEngineVector3\r\n        EXTERN, \"UnityEngineTransform.__get_position__UnityEngineVector3\"\r\n
     \       PUSH, __0_intnl_UnityEngineVector3\r\n        PUSH, __0_p_Vector3\r\n
@@ -222,6 +219,13 @@ MonoBehaviour:
     - startInstruction: 8
       endInstruction: 7
       startSourceChar: 187
+      endSourceChar: 187
+      line: 12
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 187
       endSourceChar: 196
       line: 12
       lineChar: 8
@@ -262,112 +266,154 @@ MonoBehaviour:
       lineChar: 30
       spanCodeSection: 
     - startInstruction: 8
-      endInstruction: 27
+      endInstruction: 7
       startSourceChar: 209
       endSourceChar: 218
       line: 12
       lineChar: 30
       spanCodeSection: 'height + '
-    - startInstruction: 28
-      endInstruction: 59
+    - startInstruction: 8
+      endInstruction: 39
       startSourceChar: 218
       endSourceChar: 224
       line: 12
       lineChar: 39
       spanCodeSection: '0.1f, '
-    - startInstruction: 60
-      endInstruction: 111
+    - startInstruction: 40
+      endInstruction: 71
       startSourceChar: 224
       endSourceChar: 240
       line: 12
       lineChar: 45
       spanCodeSection: "1.1f);\r\n        "
-    - startInstruction: 112
-      endInstruction: 111
+    - startInstruction: 72
+      endInstruction: 71
       startSourceChar: 240
       endSourceChar: 240
       line: 13
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 112
-      endInstruction: 111
+    - startInstruction: 72
+      endInstruction: 71
       startSourceChar: 240
       endSourceChar: 240
       line: 13
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 112
-      endInstruction: 111
+    - startInstruction: 72
+      endInstruction: 71
       startSourceChar: 240
       endSourceChar: 246
       line: 13
       lineChar: 8
       spanCodeSection: 'var p '
-    - startInstruction: 112
-      endInstruction: 111
+    - startInstruction: 72
+      endInstruction: 71
       startSourceChar: 246
       endSourceChar: 248
       line: 13
       lineChar: 14
       spanCodeSection: '= '
-    - startInstruction: 112
-      endInstruction: 111
+    - startInstruction: 72
+      endInstruction: 71
       startSourceChar: 248
       endSourceChar: 248
       line: 13
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 112
-      endInstruction: 111
+    - startInstruction: 72
+      endInstruction: 71
       startSourceChar: 248
       endSourceChar: 258
       line: 13
       lineChar: 16
       spanCodeSection: transform.
-    - startInstruction: 112
-      endInstruction: 155
+    - startInstruction: 72
+      endInstruction: 115
       startSourceChar: 258
       endSourceChar: 277
       line: 13
       lineChar: 26
       spanCodeSection: "position;\r\n        "
-    - startInstruction: 156
-      endInstruction: 155
+    - startInstruction: 116
+      endInstruction: 115
       startSourceChar: 277
       endSourceChar: 277
       line: 14
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 156
-      endInstruction: 155
+    - startInstruction: 116
+      endInstruction: 115
       startSourceChar: 277
-      endSourceChar: 283
+      endSourceChar: 277
       line: 14
       lineChar: 8
-      spanCodeSection: 'p.y = '
-    - startInstruction: 156
-      endInstruction: 179
+      spanCodeSection: 
+    - startInstruction: 116
+      endInstruction: 115
+      startSourceChar: 277
+      endSourceChar: 277
+      line: 14
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 116
+      endInstruction: 115
+      startSourceChar: 277
+      endSourceChar: 279
+      line: 14
+      lineChar: 8
+      spanCodeSection: p.
+    - startInstruction: 116
+      endInstruction: 115
+      startSourceChar: 279
+      endSourceChar: 283
+      line: 14
+      lineChar: 10
+      spanCodeSection: 'y = '
+    - startInstruction: 116
+      endInstruction: 139
       startSourceChar: 283
       endSourceChar: 300
       line: 14
       lineChar: 14
       spanCodeSection: "height;\r\n        "
-    - startInstruction: 180
-      endInstruction: 179
+    - startInstruction: 140
+      endInstruction: 139
       startSourceChar: 300
       endSourceChar: 300
       line: 15
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 180
-      endInstruction: 179
+    - startInstruction: 140
+      endInstruction: 139
       startSourceChar: 300
-      endSourceChar: 321
+      endSourceChar: 300
       line: 15
       lineChar: 8
-      spanCodeSection: 'transform.position = '
-    - startInstruction: 180
-      endInstruction: 180
+      spanCodeSection: 
+    - startInstruction: 140
+      endInstruction: 139
+      startSourceChar: 300
+      endSourceChar: 300
+      line: 15
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 140
+      endInstruction: 139
+      startSourceChar: 300
+      endSourceChar: 310
+      line: 15
+      lineChar: 8
+      spanCodeSection: transform.
+    - startInstruction: 140
+      endInstruction: 139
+      startSourceChar: 310
+      endSourceChar: 321
+      line: 15
+      lineChar: 18
+      spanCodeSection: 'position = '
+    - startInstruction: 140
+      endInstruction: 140
       startSourceChar: 321
       endSourceChar: 321
       line: 15
